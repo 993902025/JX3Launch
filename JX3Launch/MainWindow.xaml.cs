@@ -24,5 +24,10 @@ namespace JX3Launch
         {
             InitializeComponent();
         }
+
+        private void MainStart_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
+        }
     }
 }

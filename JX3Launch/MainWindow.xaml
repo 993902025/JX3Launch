@@ -5,8 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:JX3Launch"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="600" Width="800" AllowsTransparency="True" WindowStyle="None" Background="{x:Null}">
+	<Grid Margin="0,0,0,162">
+
+		<Image x:Name="MainStart" HorizontalAlignment="Left" Height="461" VerticalAlignment="Top" Width="800" IsHitTestVisible="True" Source="img/mainstart.png" MouseLeftButtonDown="MainStart_MouseLeftButtonDown"/>
+
+	</Grid>
 </Window>
