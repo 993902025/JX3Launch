@@ -4,28 +4,32 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:JX3Launch"
-             mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="100" RenderTransformOrigin="0.5,0.5">
+             mc:Ignorable="d" RenderTransformOrigin="0.5,0.5">
 	<UserControl.Resources>
-		<Style x:Key="ButtonAngle45" TargetType="{x:Type Button}">
+		<Style x:Key="ButtonAngle45" TargetType="Button">
 			<Setter Property="Template">
 				<Setter.Value>
-					<ControlTemplate TargetType="{x:Type Button}">
-						<Grid>
-							<Rectangle RenderTransformOrigin="0.5,0.5" Stroke="Black">
-								<Rectangle.Fill>
-									<ImageBrush ImageSource="img/StartUI2.png"/>
-								</Rectangle.Fill>
-								<Rectangle.RenderTransform>
+					<ControlTemplate TargetType="Button">
+						<Border RenderTransformOrigin="0.5,0.5" ClipToBounds="True" Margin="0" Padding="0,0,0,0" Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center">
+							<Border.RenderTransform>
+								<TransformGroup>
+									<ScaleTransform/>
+									<SkewTransform/>
+									<RotateTransform Angle="45"/>
+									<TranslateTransform/>
+								</TransformGroup>
+							</Border.RenderTransform>
+							<Image Source="img/StartUI2.png" RenderTransformOrigin="0.5,0.5" Margin="-20" ScrollViewer.VerticalScrollBarVisibility="Disabled" Width="140" Height="140" HorizontalAlignment="Center" VerticalAlignment="Center" FlowDirection="LeftToRight">
+								<Image.RenderTransform>
 									<TransformGroup>
 										<ScaleTransform/>
 										<SkewTransform/>
-										<RotateTransform Angle="0"/>
+										<RotateTransform Angle="-45"/>
 										<TranslateTransform/>
 									</TransformGroup>
-								</Rectangle.RenderTransform>
-							</Rectangle>
-						</Grid>
+								</Image.RenderTransform>
+							</Image>
+						</Border>
 						<ControlTemplate.Triggers>
 							<Trigger Property="IsFocused" Value="True"/>
 							<Trigger Property="IsDefaulted" Value="True"/>
@@ -38,28 +42,7 @@
 			</Setter>
 		</Style>
 	</UserControl.Resources>
-	<Grid RenderTransformOrigin="0.5,0.5">
-		<Grid.RenderTransform>
-			<TransformGroup>
-				<ScaleTransform/>
-				<SkewTransform/>
-				<RotateTransform Angle="0"/>
-				<TranslateTransform/>
-			</TransformGroup>
-		</Grid.RenderTransform>
-		<Button Content="Button" Margin="0,0,0,0" Style="{DynamicResource ButtonAngle45}" d:LayoutOverrides="HorizontalAlignment" RenderTransformOrigin="0.5,0.5">
-			<Button.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="0"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Button.RenderTransform>
-			<Button.Background>
-				<ImageBrush Stretch="None"/>
-			</Button.Background>
-		</Button>
+	<Button  Style="{DynamicResource ButtonAngle45}" Width="100" Height="100" VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+	</Button>
 
-	</Grid>
 </UserControl>

@@ -9,27 +9,7 @@
 	<Grid>
 		<Image x:Name="MainStart" HorizontalAlignment="Left" Height="495" VerticalAlignment="Top" Width="800" IsHitTestVisible="True" Source="img/StartUI1.png" MouseLeftButtonDown="MainStart_MouseLeftButtonDown" Margin="0,0,0,-162">
 		</Image>
-		<Button x:Name="StartGame" Height="80" Width="80" RenderTransformOrigin="0.5,0.5" Cursor="Hand" Content="">
-			<Button.Background>
-				<ImageBrush ImageSource="img/StartUI2.png" Stretch="None">
-					<ImageBrush.RelativeTransform>
-						<TransformGroup>
-							<ScaleTransform CenterY="0.5" CenterX="0.5"/>
-							<SkewTransform CenterY="0.5" CenterX="0.5"/>
-							<RotateTransform Angle="45" CenterY="0.5" CenterX="0.5"/>
-							<TranslateTransform/>
-						</TransformGroup>
-					</ImageBrush.RelativeTransform>
-				</ImageBrush>
-			</Button.Background>
-			<Button.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="-45"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</Button.RenderTransform>
-		</Button>
+		<!-- 开始游戏按钮样式 -->
+		<local:UserControl1 x:Name="StartGame1"  HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="100" Cursor="Hand" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
 	</Grid>
 </Window>
